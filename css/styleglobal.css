@@ -1,0 +1,170 @@
+/* STRUCTURE DU SITE, ECRAN DE CHARGEMENT ET SCROLLBAR */
+
+*{
+	box-sizing: border-box;
+	font-family: Roboto;
+}
+
+body, html{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	letter-spacing: 1px;
+	background-color: #0d1b2a;
+}
+
+.container{
+	padding: 20px 15px;
+	width: 100%;
+	max-width: 90%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	font-size: 1rem;
+	font-family: Arial;
+}
+
+.loader-container{
+	width: 100%;
+	height: 100vh;
+	background-color: #0d1b2a;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+	left: 0;
+	top: 0;
+}
+
+.loader{
+	width: 50px;
+	height: 50px;
+	border: 8px solid;
+	color: #ff1c1c;
+	border-radius: 50%;
+	border-top-color: transparent;
+	animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader{
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+/* STYLE SCROLL BAR */
+
+::-webkit-scrollbar{
+	background: #0d1b2a;
+	width: 5px;
+}
+::-webkit-scrollbar-track{
+	box-shadow: inset 0 0 10px #00000070;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+	background: linear-gradient(125deg,#ff1c1c,#0d1b2a);
+	border-radius: 10px;
+}
+
+/* HEADER */
+
+header{
+	position: relative;
+}
+
+/* LOGO & NAVBAR */
+
+.logo{
+	text-align: center;
+}
+
+.logo img{
+	max-width: 250px;
+	height:auto;
+}
+
+nav{
+	margin-top: 30px;
+	padding-bottom: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px white solid;
+	border-radius: 10px;
+}
+
+nav a{
+	margin: 0 30px;
+	font-size: 0.92rem;
+	color: white;
+	font-weight: bold;
+	transition-duration: 1.5s;
+	transition-property: all;
+}
+
+.active{
+	color: #ff1c1c;
+}
+
+nav a:hover{
+	color: #ff1c1c;
+	transition: 0.3s ease-in;
+}
+
+/* PHONE RESPONSIVE */
+
+.phoneresponsive{
+	display: none;
+}
+
+/* MAIN */
+
+main{
+	padding-top: 1vh;
+}
+
+/* FOOTER */
+
+footer{
+	font-size: 0.6rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.footer{
+	color: white;
+	margin-bottom: 3vh;
+}
+
+/* INSIGNES RESEAUX SOCIAUX */
+
+.social_icons{
+	position: relative;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 0vh 5px 5px 4px;
+	color: white;
+}
+
+.social_icons a{
+	font-size: 2em;
+	box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+	transition-duration: 1.5s;
+	transition-property: all;
+}
+
+.social_icons a:hover{
+	color: #ff1c1c;
+	transition: 0.3s ease-in;
+	box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);
+}
